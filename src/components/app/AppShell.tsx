@@ -17,6 +17,7 @@ import {
   Type,
 } from "lucide-react";
 import type { ReactNode } from "react";
+import logoUrl from "@/assets/urinara-logo.png";
 
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/lib/auth";
@@ -60,9 +61,13 @@ export function AppShell({ children }: { children: ReactNode }) {
     <div className="min-h-dvh bg-background">
       <aside className="fixed inset-y-0 left-0 z-40 hidden w-64 flex-col border-r border-border bg-sidebar lg:flex">
         <Link to="/" className="flex items-center gap-2.5 px-5 py-5">
-          <span className="grid size-9 place-items-center rounded-xl bg-primary font-kr text-lg font-bold text-primary-foreground">
-            한
-          </span>
+          <img
+            src={logoUrl}
+            alt="Urinara Academy logo"
+            width={36}
+            height={36}
+            className="size-9 rounded-xl"
+          />
           <span>
             <span className="block font-display text-lg leading-none font-semibold">Urinara Academy</span>
             <span className="text-[11px] text-muted-foreground">Speak from day one</span>

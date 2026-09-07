@@ -82,9 +82,13 @@ function AuthPage() {
     <div className="grid min-h-dvh place-items-center bg-background px-4 py-10">
       <div className="w-full max-w-md">
         <Link to="/" className="mb-6 flex items-center justify-center gap-2.5">
-          <span className="grid size-10 place-items-center rounded-xl bg-primary font-kr text-lg font-bold text-primary-foreground">
-            한
-          </span>
+          <img
+            src={logoUrl}
+            alt="Urinara Academy logo"
+            width={40}
+            height={40}
+            className="size-10 rounded-xl"
+          />
           <span className="font-display text-xl font-semibold">Urinara Academy</span>
         </Link>
 
