@@ -186,7 +186,7 @@ export function SiteFooter() {
         />
       </div>
       <div className="container-page border-t border-border py-6 text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Urinara Academy Korean Learning. Sample content for demonstration.
+        © {new Date().getFullYear()} Urinara Academy. Sample content for demonstration.
       </div>
     </footer>
   );
