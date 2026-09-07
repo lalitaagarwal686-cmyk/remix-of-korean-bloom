@@ -9,7 +9,7 @@ import { curriculumQueries, learnerQueries } from "@/lib/queries";
 export const Route = createFileRoute("/app/learn")({
   head: () => ({
     meta: [
-      { title: "Learn Korean — lessons & missions | Korean Bloom" },
+      { title: "Learn Korean — lessons & missions | Urinara Academy" },
       {
         name: "description",
         content: "Beginner to advanced Korean missions: vocabulary, pronunciation, grammar, listening and speaking.",

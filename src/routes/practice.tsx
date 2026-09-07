@@ -12,7 +12,7 @@ import { quiz, words } from "@/lib/content";
 export const Route = createFileRoute("/practice")({
   head: () => ({
     meta: [
-      { title: "Korean Practice Hub — Flashcards, Quizzes & Speaking | Hanji" },
+      { title: "Korean Practice Hub — Flashcards, Quizzes & Speaking | Urinara Academy" },
       {
         name: "description",
         content:

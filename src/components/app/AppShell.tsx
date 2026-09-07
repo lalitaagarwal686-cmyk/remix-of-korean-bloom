@@ -64,7 +64,7 @@ export function AppShell({ children }: { children: ReactNode }) {
             한
           </span>
           <span>
-            <span className="block font-display text-lg leading-none font-semibold">Korean Bloom</span>
+            <span className="block font-display text-lg leading-none font-semibold">Urinara Academy</span>
             <span className="text-[11px] text-muted-foreground">Speak from day one</span>
           </span>
         </Link>
@@ -96,7 +96,7 @@ export function AppShell({ children }: { children: ReactNode }) {
         <header className="sticky top-0 z-30 glass">
           <div className="flex h-14 items-center gap-3 px-4">
             <Link to="/app/dashboard" className="font-display text-base font-semibold lg:hidden">
-              Korean Bloom
+              Urinara Academy
             </Link>
             <div className="ml-auto flex items-center gap-3 text-xs font-semibold">
               <span className="inline-flex items-center gap-1 rounded-full bg-accent-soft px-2.5 py-1 text-accent">

@@ -12,13 +12,13 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/learn")({
   head: () => ({
     meta: [
-      { title: "Lesson 1: Greetings & Introductions | Hanji Korean" },
+      { title: "Lesson 1: Greetings & Introductions | Urinara Academy Korean" },
       {
         name: "description",
         content:
           "Work through a full Korean lesson: warm-up, vocabulary with audio, one grammar pattern, and a mixed quiz with instant feedback.",
       },
-      { property: "og:title", content: "Lesson 1: Greetings & Introductions | Hanji Korean" },
+      { property: "og:title", content: "Lesson 1: Greetings & Introductions | Urinara Academy Korean" },
       {
         property: "og:description",
         content: "A guided Korean lesson with audio vocabulary, grammar and an interactive quiz.",

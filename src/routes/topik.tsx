@@ -21,13 +21,13 @@ import { Section, SectionHeading } from "@/components/Section";
 export const Route = createFileRoute("/topik")({
   head: () => ({
     meta: [
-      { title: "TOPIK Preparation & Free Placement Test | Hanji Korean" },
+      { title: "TOPIK Preparation & Free Placement Test | Urinara Academy Korean" },
       {
         name: "description",
         content:
           "Prepare for TOPIK I and TOPIK II with timed mock papers, listening strategy and writing templates. Start with a free six-minute placement test.",
       },
-      { property: "og:title", content: "TOPIK Preparation & Free Placement Test | Hanji" },
+      { property: "og:title", content: "TOPIK Preparation & Free Placement Test | Urinara Academy" },
       {
         property: "og:description",
         content: "Timed TOPIK mocks, writing templates and a free placement test for Korean learners.",

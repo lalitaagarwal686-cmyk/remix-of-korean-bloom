@@ -80,13 +80,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Hanji — Learn Korean, Hangul to TOPIK II" },
+      { title: "Urinara Academy — Learn Korean, Hangul to TOPIK II" },
       {
         name: "description",
         content:
-          "Hanji is a mobile-first Korean learning platform for Indian learners: Hangul, grammar, speaking practice and TOPIK preparation.",
+          "Urinara Academy is a mobile-first Korean learning platform for Indian learners: Hangul, grammar, speaking practice and TOPIK preparation.",
       },
-      { property: "og:title", content: "Hanji — Learn Korean, Hangul to TOPIK II" },
+      { property: "og:title", content: "Urinara Academy — Learn Korean, Hangul to TOPIK II" },
       {
         property: "og:description",
         content:

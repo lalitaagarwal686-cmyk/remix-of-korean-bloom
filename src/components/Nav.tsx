@@ -30,13 +30,13 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 glass">
       <div className="container-page flex h-16 items-center gap-4">
-        <Link to="/" className="flex min-w-0 items-center gap-2.5" aria-label="Hanji home">
+        <Link to="/" className="flex min-w-0 items-center gap-2.5" aria-label="Urinara Academy home">
           <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-primary font-kr text-lg font-bold text-primary-foreground">
             한
           </span>
           <span className="min-w-0">
             <span className="block truncate font-display text-lg leading-none font-semibold">
-              Hanji
+              Urinara Academy
             </span>
             <span className="block text-[11px] tracking-wide text-muted-foreground">
               Korean, made learnable
@@ -145,7 +145,7 @@ export function SiteFooter() {
             <span className="grid size-9 place-items-center rounded-xl bg-primary font-kr text-lg font-bold text-primary-foreground">
               한
             </span>
-            <span className="font-display text-lg font-semibold">Hanji</span>
+            <span className="font-display text-lg font-semibold">Urinara Academy</span>
           </div>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
             A Korean learning platform built for Indian learners — Hangul to TOPIK II, on any
@@ -176,7 +176,7 @@ export function SiteFooter() {
         />
       </div>
       <div className="container-page border-t border-border py-6 text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Hanji Korean Learning. Sample content for demonstration.
+        © {new Date().getFullYear()} Urinara Academy Korean Learning. Sample content for demonstration.
       </div>
     </footer>
   );
