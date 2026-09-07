@@ -38,13 +38,13 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Hanji — Learn Korean from Hangul to TOPIK II" },
+      { title: "Urinara Academy — Learn Korean from Hangul to TOPIK II" },
       {
         name: "description",
         content:
           "Learn Korean the structured way: Hangul foundations, grammar, speaking drills, AI practice and TOPIK preparation designed for Indian learners.",
       },
-      { property: "og:title", content: "Hanji — Learn Korean from Hangul to TOPIK II" },
+      { property: "og:title", content: "Urinara Academy — Learn Korean from Hangul to TOPIK II" },
       {
         property: "og:description",
         content:
@@ -121,7 +121,7 @@ function Hero() {
           <div className="overflow-hidden rounded-3xl border border-border shadow-lift">
             <img
               src={heroImage}
-              alt="A quiet Korean study desk with celadon vases, ink brushes and hanji paper at golden hour"
+              alt="A quiet Korean study desk with celadon vases, ink brushes and urinara paper at golden hour"
               width={1280}
               height={960}
               className="h-full w-full object-cover"

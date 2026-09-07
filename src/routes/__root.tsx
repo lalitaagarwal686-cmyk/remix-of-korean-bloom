@@ -80,13 +80,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Hanji — Learn Korean, Hangul to TOPIK II" },
+      { title: "Urinara Academy — Learn Korean, Hangul to TOPIK II" },
       {
         name: "description",
         content:
-          "Hanji is a mobile-first Korean learning platform for Indian learners: Hangul, grammar, speaking practice and TOPIK preparation.",
+          "Urinara Academy is a mobile-first Korean learning platform for Indian learners: Hangul, grammar, speaking practice and TOPIK preparation.",
       },
-      { property: "og:title", content: "Hanji — Learn Korean, Hangul to TOPIK II" },
+      { property: "og:title", content: "Urinara Academy — Learn Korean, Hangul to TOPIK II" },
       {
         property: "og:description",
         content:
@@ -106,7 +106,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap",
       },
-      { rel: "icon", href: `${import.meta.env.BASE_URL}favicon.ico`, type: "image/x-icon" },
+      { rel: "icon", href: `${import.meta.env.BASE_URL}favicon.png`, type: "image/png" },
     ],
   }),
   shellComponent: RootShell,

@@ -7,17 +7,18 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/lib/auth";
+import logoUrl from "@/assets/urinara-logo.png";
 
 export const Route = createFileRoute("/auth")({
   head: () => ({
     meta: [
-      { title: "Sign in — Korean Bloom AI Korean Tutor" },
+      { title: "Sign in — Urinara Academy AI Korean Tutor" },
       {
         name: "description",
         content:
-          "Create your Korean Bloom account to speak Korean with an AI tutor, track XP and streaks, and prepare for TOPIK.",
+          "Create your Urinara Academy account to speak Korean with an AI tutor, track XP and streaks, and prepare for TOPIK.",
       },
-      { property: "og:title", content: "Sign in — Korean Bloom" },
+      { property: "og:title", content: "Sign in — Urinara Academy" },
       {
         property: "og:description",
         content: "Log in to keep your Korean speaking streak, saved words and AI tutor memory.",
@@ -82,10 +83,14 @@ function AuthPage() {
     <div className="grid min-h-dvh place-items-center bg-background px-4 py-10">
       <div className="w-full max-w-md">
         <Link to="/" className="mb-6 flex items-center justify-center gap-2.5">
-          <span className="grid size-10 place-items-center rounded-xl bg-primary font-kr text-lg font-bold text-primary-foreground">
-            한
-          </span>
-          <span className="font-display text-xl font-semibold">Korean Bloom</span>
+          <img
+            src={logoUrl}
+            alt="Urinara Academy logo"
+            width={40}
+            height={40}
+            className="size-10 rounded-xl"
+          />
+          <span className="font-display text-xl font-semibold">Urinara Academy</span>
         </Link>
 
         <div className="surface-card p-6">

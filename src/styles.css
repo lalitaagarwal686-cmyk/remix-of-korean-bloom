@@ -5,8 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Hanji — Korean learning design system.
- * Palette: hanji paper ivory, celadon jade, ink indigo, dancheong terracotta.
+ * Urinara Academy — Korean learning design system.
+ * Palette: urinara paper ivory, celadon jade, ink indigo, dancheong terracotta.
  * All colors use oklch. Never hardcode colors in components.
  */
 

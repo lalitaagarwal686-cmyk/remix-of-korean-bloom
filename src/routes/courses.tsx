@@ -10,13 +10,13 @@ import { courses } from "@/lib/content";
 export const Route = createFileRoute("/courses")({
   head: () => ({
     meta: [
-      { title: "Korean Courses — Beginner to Advanced | Hanji" },
+      { title: "Korean Courses — Beginner to Advanced | Urinara Academy" },
       {
         name: "description",
         content:
           "Browse Korean courses from Hangul foundations to business Korean, each mapped to TOPIK levels with lesson counts and study hours.",
       },
-      { property: "og:title", content: "Korean Courses — Beginner to Advanced | Hanji" },
+      { property: "og:title", content: "Korean Courses — Beginner to Advanced | Urinara Academy" },
       {
         property: "og:description",
         content: "Structured Korean courses mapped to TOPIK levels, from Hangul to business Korean.",

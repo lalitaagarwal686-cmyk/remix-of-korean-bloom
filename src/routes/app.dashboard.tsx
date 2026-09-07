@@ -13,13 +13,13 @@ import { useActiveTutor } from "@/lib/use-tutor";
 export const Route = createFileRoute("/app/dashboard")({
   head: () => ({
     meta: [
-      { title: "Dashboard — Korean Bloom" },
+      { title: "Dashboard — Urinara Academy" },
       {
         name: "description",
         content:
           "Your Korean speaking dashboard: streak, XP, coins, weaknesses, recommended lessons and today's AI conversation.",
       },
-      { property: "og:title", content: "Dashboard — Korean Bloom" },
+      { property: "og:title", content: "Dashboard — Urinara Academy" },
       { property: "og:description", content: "Track your Korean speaking progress every day." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

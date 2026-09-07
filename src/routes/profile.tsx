@@ -19,13 +19,13 @@ import { progressData } from "@/lib/content";
 export const Route = createFileRoute("/profile")({
   head: () => ({
     meta: [
-      { title: "Profile & Study Settings | Hanji Korean" },
+      { title: "Profile & Study Settings | Urinara Academy Korean" },
       {
         name: "description",
         content:
           "Manage your Korean study goal, daily reminder time, translation language and audio preferences.",
       },
-      { property: "og:title", content: "Profile & Study Settings | Hanji Korean" },
+      { property: "og:title", content: "Profile & Study Settings | Urinara Academy Korean" },
       {
         property: "og:description",
         content: "Set your daily Korean goal, reminders, translation language and audio options.",

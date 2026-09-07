@@ -17,6 +17,7 @@ import {
   Type,
 } from "lucide-react";
 import type { ReactNode } from "react";
+import logoUrl from "@/assets/urinara-logo.png";
 
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/lib/auth";
@@ -60,11 +61,15 @@ export function AppShell({ children }: { children: ReactNode }) {
     <div className="min-h-dvh bg-background">
       <aside className="fixed inset-y-0 left-0 z-40 hidden w-64 flex-col border-r border-border bg-sidebar lg:flex">
         <Link to="/" className="flex items-center gap-2.5 px-5 py-5">
-          <span className="grid size-9 place-items-center rounded-xl bg-primary font-kr text-lg font-bold text-primary-foreground">
-            한
-          </span>
+          <img
+            src={logoUrl}
+            alt="Urinara Academy logo"
+            width={36}
+            height={36}
+            className="size-9 rounded-xl"
+          />
           <span>
-            <span className="block font-display text-lg leading-none font-semibold">Korean Bloom</span>
+            <span className="block font-display text-lg leading-none font-semibold">Urinara Academy</span>
             <span className="text-[11px] text-muted-foreground">Speak from day one</span>
           </span>
         </Link>
@@ -96,7 +101,7 @@ export function AppShell({ children }: { children: ReactNode }) {
         <header className="sticky top-0 z-30 glass">
           <div className="flex h-14 items-center gap-3 px-4">
             <Link to="/app/dashboard" className="font-display text-base font-semibold lg:hidden">
-              Korean Bloom
+              Urinara Academy
             </Link>
             <div className="ml-auto flex items-center gap-3 text-xs font-semibold">
               <span className="inline-flex items-center gap-1 rounded-full bg-accent-soft px-2.5 py-1 text-accent">

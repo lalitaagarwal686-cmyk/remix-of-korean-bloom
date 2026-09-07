@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logoUrl from "@/assets/urinara-logo.png";
 
 export const navItems = [
   { to: "/", label: "Home", icon: Home },
@@ -30,13 +31,17 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 glass">
       <div className="container-page flex h-16 items-center gap-4">
-        <Link to="/" className="flex min-w-0 items-center gap-2.5" aria-label="Hanji home">
-          <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-primary font-kr text-lg font-bold text-primary-foreground">
-            한
-          </span>
+        <Link to="/" className="flex min-w-0 items-center gap-2.5" aria-label="Urinara Academy home">
+          <img
+            src={logoUrl}
+            alt="Urinara Academy logo"
+            width={36}
+            height={36}
+            className="size-9 shrink-0 rounded-xl"
+          />
           <span className="min-w-0">
             <span className="block truncate font-display text-lg leading-none font-semibold">
-              Hanji
+              Urinara Academy
             </span>
             <span className="block text-[11px] tracking-wide text-muted-foreground">
               Korean, made learnable
@@ -142,10 +147,15 @@ export function SiteFooter() {
       <div className="container-page grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-2.5">
-            <span className="grid size-9 place-items-center rounded-xl bg-primary font-kr text-lg font-bold text-primary-foreground">
-              한
-            </span>
-            <span className="font-display text-lg font-semibold">Hanji</span>
+            <img
+              src={logoUrl}
+              alt="Urinara Academy logo"
+              width={36}
+              height={36}
+              loading="lazy"
+              className="size-9 rounded-xl"
+            />
+            <span className="font-display text-lg font-semibold">Urinara Academy</span>
           </div>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
             A Korean learning platform built for Indian learners — Hangul to TOPIK II, on any
@@ -176,7 +186,7 @@ export function SiteFooter() {
         />
       </div>
       <div className="container-page border-t border-border py-6 text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Hanji Korean Learning. Sample content for demonstration.
+        © {new Date().getFullYear()} Urinara Academy. Sample content for demonstration.
       </div>
     </footer>
   );

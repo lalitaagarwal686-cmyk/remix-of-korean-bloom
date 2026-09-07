@@ -10,13 +10,13 @@ import { progressData } from "@/lib/content";
 export const Route = createFileRoute("/progress")({
   head: () => ({
     meta: [
-      { title: "Your Korean Progress — Streak, XP & Skills | Hanji" },
+      { title: "Your Korean Progress — Streak, XP & Skills | Urinara Academy" },
       {
         name: "description",
         content:
           "Track your Korean study streak, XP, level badges and skill balance across reading, listening, speaking and writing.",
       },
-      { property: "og:title", content: "Your Korean Progress — Streak, XP & Skills | Hanji" },
+      { property: "og:title", content: "Your Korean Progress — Streak, XP & Skills | Urinara Academy" },
       {
         property: "og:description",
         content: "Streaks, XP, badges and a skill breakdown for your Korean study routine.",
