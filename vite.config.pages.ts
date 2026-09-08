@@ -7,8 +7,8 @@ const base = process.env["PAGES_BASE"] ?? "/korean-path-learn/";
 export default defineConfig({
   nitro: false,
   tanstackStart: {
-    // Render a static shell and hydrate on the client — no server needed.
-    spa: { enabled: true },
+  // Render actual static pages for GitHub Pages.
+  spa: { enabled: false },
     prerender: { enabled: true },
     server: { entry: "server" },
   },
