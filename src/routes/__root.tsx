@@ -115,7 +115,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
-const GTM_ID = "GTM-XXXXXXX";
+const GTM_ID = "GTM-WVDS76CS";
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
