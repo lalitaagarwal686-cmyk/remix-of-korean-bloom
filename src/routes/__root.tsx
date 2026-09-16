@@ -155,6 +155,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+
+  // Push SPA route changes to GTM's dataLayer so every navigated route is tracked.
+  useEffect(() => {
+    const w = window as unknown as { dataLayer?: Record<string, unknown>[] };
+    w.dataLayer = w.dataLayer || [];
+    w.dataLayer.push({
+      event: "page_view",
+      page_path: window.location.pathname + window.location.search,
+      page_title: document.title,
+    });
+  }, [pathname]);
 
   return (
     <QueryClientProvider client={queryClient}>
