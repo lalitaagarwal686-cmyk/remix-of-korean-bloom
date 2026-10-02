@@ -115,7 +115,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
-const GTM_ID = "GTM-WVDS76CS";
+const GTM_ID = "GTM-54NCKC64";
 
 // Meta (Facebook) Pixel
 const META_PIXEL_ID = "1011006421899217";
