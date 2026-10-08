@@ -7,6 +7,7 @@ import {
   useRouterState,
   HeadContent,
   Scripts,
+  type ErrorComponentProps,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
@@ -37,7 +38,7 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
@@ -117,6 +118,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 const GTM_IDS = ["GTM-54NCKC64", "GTM-WVDS76CS"];
 
+// Google Ads (gtag.js)
+const GOOGLE_ADS_ID = "AW-18400139322";
+
 // Meta (Facebook) Pixel
 const META_PIXEL_ID = "1011006421899217";
 
@@ -172,6 +176,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
         {/* End Microsoft Clarity */}
+        {/* Google tag (gtag.js) */}
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', '${GOOGLE_ADS_ID}');`,
+          }}
+        />
+        {/* End Google tag (gtag.js) */}
         <HeadContent />
       </head>
       <body>
@@ -199,11 +215,12 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
-  // Push SPA route changes to GTM's dataLayer and Meta Pixel so every navigated route is tracked.
+  // Push SPA route changes to GTM's dataLayer, Meta Pixel and Google Ads so every navigated route is tracked.
   useEffect(() => {
     const w = window as unknown as {
       dataLayer?: Record<string, unknown>[];
       fbq?: (...args: unknown[]) => void;
+      gtag?: (...args: unknown[]) => void;
     };
     w.dataLayer = w.dataLayer || [];
     w.dataLayer.push({
@@ -212,6 +229,10 @@ function RootComponent() {
       page_title: document.title,
     });
     w.fbq?.("track", "PageView");
+    w.gtag?.("event", "page_view", {
+      page_path: window.location.pathname + window.location.search,
+      page_title: document.title,
+    });
   }, [pathname]);
 
   return (
