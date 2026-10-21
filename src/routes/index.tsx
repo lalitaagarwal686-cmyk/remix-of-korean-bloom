@@ -50,6 +50,10 @@ export const Route = createFileRoute("/")({
         content:
           "Structured Korean courses, AI speaking practice and TOPIK prep built mobile-first for Indian learners.",
       },
+      {
+        name: "google-site-verification",
+        content: "FcxCBi77bhPZ-wtP2A67VnCBpkojY-bchX4w42SC5ZY",
+      },
     ],
   }),
   component: Home,
