@@ -99,8 +99,6 @@ export const completeLesson = createServerFn({ method: "POST" })
     z
       .object({
         lessonId: z.string().uuid(),
-        score: z.number().int().min(0).max(100).default(80),
-        seconds: z.number().int().min(0).max(36000).default(240),
       })
       .parse(input),
   )

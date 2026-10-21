@@ -280,41 +280,93 @@ export async function finishSession(db: Db, userId: string, sessionId: string, s
 export async function markLessonComplete(
   db: Db,
   userId: string,
-  input: { lessonId: string; score: number; seconds: number },
+  input: { lessonId: string },
 ) {
   const { data: lesson } = await db
     .from("lessons")
-    .select("xp_reward, coin_reward")
+    .select("id, xp_reward, coin_reward, minutes")
     .eq("id", input.lessonId)
     .maybeSingle();
+  if (!lesson) return { ok: false as const, reason: "lesson_not_found" as const };
 
-  await db.from("user_progress").upsert(
-    {
-      user_id: userId,
-      lesson_id: input.lessonId,
+  const { data: steps, error: stepsError } = await db
+    .from("lesson_steps")
+    .select("step_index")
+    .eq("lesson_id", input.lessonId)
+    .order("step_index", { ascending: true });
+  if (stepsError) throw new Error("Could not verify lesson steps");
+  if (!steps?.length) return { ok: false as const, reason: "lesson_steps_missing" as const };
+
+  const lastStep = steps[steps.length - 1]!.step_index;
+  const { data: progress, error: progressError } = await db
+    .from("user_progress")
+    .select("status, current_step")
+    .eq("user_id", userId)
+    .eq("lesson_id", input.lessonId)
+    .maybeSingle();
+  if (progressError) throw new Error("Could not verify lesson progress");
+  if (progress?.status !== "in_progress" || progress.current_step < lastStep) {
+    return { ok: false as const, reason: "lesson_incomplete" as const };
+  }
+
+  // A conditional state transition makes completion and its rewards one-time,
+  // including when duplicate requests arrive at the same time.
+  const { data: completed, error: completionError } = await db
+    .from("user_progress")
+    .update({
       status: "completed",
-      score: input.score,
-      seconds_spent: input.seconds,
       completed_at: new Date().toISOString(),
-    },
-    { onConflict: "user_id,lesson_id" },
-  );
+      seconds_spent: Math.max(1, lesson.minutes ?? 1) * 60,
+    })
+    .eq("user_id", userId)
+    .eq("lesson_id", input.lessonId)
+    .eq("status", "in_progress")
+    .gte("current_step", lastStep)
+    .select("id")
+    .maybeSingle();
+  if (completionError) throw new Error("Could not complete lesson");
+  if (!completed) return { ok: false as const, reason: "lesson_already_completed" as const };
 
   await awardProgress(db, userId, {
-    xp: lesson?.xp_reward ?? 40,
-    coins: lesson?.coin_reward ?? 10,
+    xp: lesson.xp_reward,
+    coins: lesson.coin_reward,
     lessons: 1,
-    minutes: Math.max(1, Math.round(input.seconds / 60)),
+    minutes: Math.max(1, lesson.minutes ?? 1),
   });
   await rebuildRecommendations(db, userId);
-  return { ok: true, xp: lesson?.xp_reward ?? 40, coins: lesson?.coin_reward ?? 10 };
+  return { ok: true as const, xp: lesson.xp_reward, coins: lesson.coin_reward };
 }
 
 export async function upsertLessonStep(db: Db, userId: string, lessonId: string, step: number) {
-  await db.from("user_progress").upsert(
+  const { data: steps, error: stepsError } = await db
+    .from("lesson_steps")
+    .select("step_index")
+    .eq("lesson_id", lessonId)
+    .order("step_index", { ascending: true });
+  if (stepsError) throw new Error("Could not verify lesson steps");
+  if (!steps?.length || !steps.some((row) => row.step_index === step)) {
+    return { ok: false as const, reason: "invalid_lesson_step" as const };
+  }
+
+  const { data: progress, error: progressError } = await db
+    .from("user_progress")
+    .select("status, current_step")
+    .eq("user_id", userId)
+    .eq("lesson_id", lessonId)
+    .maybeSingle();
+  if (progressError) throw new Error("Could not verify lesson progress");
+  if (progress?.status === "completed") {
+    return { ok: false as const, reason: "lesson_already_completed" as const };
+  }
+
+  const expectedStep = progress ? progress.current_step + 1 : steps[0]!.step_index;
+  if (step !== expectedStep) return { ok: false as const, reason: "lesson_step_out_of_order" as const };
+
+  const { error } = await db.from("user_progress").upsert(
     { user_id: userId, lesson_id: lessonId, status: "in_progress", current_step: step },
     { onConflict: "user_id,lesson_id" },
   );
+  if (error) throw new Error("Could not save lesson progress");
   return { ok: true };
 }
 
