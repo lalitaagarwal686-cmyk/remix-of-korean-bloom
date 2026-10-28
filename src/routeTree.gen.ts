@@ -12,8 +12,24 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AppRouteImport } from './routes/app'
 import { Route as AuthRouteImport } from './routes/auth'
+import { Route as BeginnerKoreanLessonsRouteImport } from './routes/beginner-korean-lessons'
+import { Route as CertificatesRouteImport } from './routes/certificates'
+import { Route as Class101AlternativeRouteImport } from './routes/class-101-alternative'
 import { Route as CoursesRouteImport } from './routes/courses'
+import { Route as ExamPrepRouteImport } from './routes/exam-prep'
+import { Route as FreeCoursesRouteImport } from './routes/free-courses'
+import { Route as FreeKoreanLessonsRouteImport } from './routes/free-korean-lessons'
+import { Route as InteractiveKoreanLearningRouteImport } from './routes/interactive-korean-learning'
+import { Route as KingSejongInstituteAlternativeRouteImport } from './routes/king-sejong-institute-alternative'
+import { Route as KoreanClassesNearMeRouteImport } from './routes/korean-classes-near-me'
+import { Route as KoreanCoursesWithCertificateRouteImport } from './routes/korean-courses-with-certificate'
+import { Route as KoreanDegreeOnlineRouteImport } from './routes/korean-degree-online'
+import { Route as KoreanLanguageAppRouteImport } from './routes/korean-language-app'
+import { Route as KoreanLearningWebsiteRouteImport } from './routes/korean-learning-website'
 import { Route as LearnRouteImport } from './routes/learn'
+import { Route as LearnKoreanLanguageRouteImport } from './routes/learn-korean-language'
+import { Route as LearnKoreanOnlineRouteImport } from './routes/learn-korean-online'
+import { Route as LearnKoreanOnlineFreeRouteImport } from './routes/learn-korean-online-free'
 import { Route as PracticeRouteImport } from './routes/practice'
 import { Route as ProfileRouteImport } from './routes/profile'
 import { Route as ProgressRouteImport } from './routes/progress'
@@ -53,14 +69,97 @@ const AuthRoute = AuthRouteImport.update({
   path: '/auth',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BeginnerKoreanLessonsRoute = BeginnerKoreanLessonsRouteImport.update({
+  id: '/beginner-korean-lessons',
+  path: '/beginner-korean-lessons',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CertificatesRoute = CertificatesRouteImport.update({
+  id: '/certificates',
+  path: '/certificates',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Class101AlternativeRoute = Class101AlternativeRouteImport.update({
+  id: '/class-101-alternative',
+  path: '/class-101-alternative',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CoursesRoute = CoursesRouteImport.update({
   id: '/courses',
   path: '/courses',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ExamPrepRoute = ExamPrepRouteImport.update({
+  id: '/exam-prep',
+  path: '/exam-prep',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FreeCoursesRoute = FreeCoursesRouteImport.update({
+  id: '/free-courses',
+  path: '/free-courses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FreeKoreanLessonsRoute = FreeKoreanLessonsRouteImport.update({
+  id: '/free-korean-lessons',
+  path: '/free-korean-lessons',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InteractiveKoreanLearningRoute =
+  InteractiveKoreanLearningRouteImport.update({
+    id: '/interactive-korean-learning',
+    path: '/interactive-korean-learning',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const KingSejongInstituteAlternativeRoute =
+  KingSejongInstituteAlternativeRouteImport.update({
+    id: '/king-sejong-institute-alternative',
+    path: '/king-sejong-institute-alternative',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const KoreanClassesNearMeRoute = KoreanClassesNearMeRouteImport.update({
+  id: '/korean-classes-near-me',
+  path: '/korean-classes-near-me',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoreanCoursesWithCertificateRoute =
+  KoreanCoursesWithCertificateRouteImport.update({
+    id: '/korean-courses-with-certificate',
+    path: '/korean-courses-with-certificate',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const KoreanDegreeOnlineRoute = KoreanDegreeOnlineRouteImport.update({
+  id: '/korean-degree-online',
+  path: '/korean-degree-online',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoreanLanguageAppRoute = KoreanLanguageAppRouteImport.update({
+  id: '/korean-language-app',
+  path: '/korean-language-app',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoreanLearningWebsiteRoute = KoreanLearningWebsiteRouteImport.update({
+  id: '/korean-learning-website',
+  path: '/korean-learning-website',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LearnRoute = LearnRouteImport.update({
   id: '/learn',
   path: '/learn',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LearnKoreanLanguageRoute = LearnKoreanLanguageRouteImport.update({
+  id: '/learn-korean-language',
+  path: '/learn-korean-language',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LearnKoreanOnlineRoute = LearnKoreanOnlineRouteImport.update({
+  id: '/learn-korean-online',
+  path: '/learn-korean-online',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LearnKoreanOnlineFreeRoute = LearnKoreanOnlineFreeRouteImport.update({
+  id: '/learn-korean-online-free',
+  path: '/learn-korean-online-free',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PracticeRoute = PracticeRouteImport.update({
@@ -183,8 +282,24 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/app': typeof AppRouteWithChildren
   '/auth': typeof AuthRoute
+  '/beginner-korean-lessons': typeof BeginnerKoreanLessonsRoute
+  '/certificates': typeof CertificatesRoute
+  '/class-101-alternative': typeof Class101AlternativeRoute
   '/courses': typeof CoursesRoute
+  '/exam-prep': typeof ExamPrepRoute
+  '/free-courses': typeof FreeCoursesRoute
+  '/free-korean-lessons': typeof FreeKoreanLessonsRoute
+  '/interactive-korean-learning': typeof InteractiveKoreanLearningRoute
+  '/king-sejong-institute-alternative': typeof KingSejongInstituteAlternativeRoute
+  '/korean-classes-near-me': typeof KoreanClassesNearMeRoute
+  '/korean-courses-with-certificate': typeof KoreanCoursesWithCertificateRoute
+  '/korean-degree-online': typeof KoreanDegreeOnlineRoute
+  '/korean-language-app': typeof KoreanLanguageAppRoute
+  '/korean-learning-website': typeof KoreanLearningWebsiteRoute
   '/learn': typeof LearnRoute
+  '/learn-korean-language': typeof LearnKoreanLanguageRoute
+  '/learn-korean-online': typeof LearnKoreanOnlineRoute
+  '/learn-korean-online-free': typeof LearnKoreanOnlineFreeRoute
   '/practice': typeof PracticeRoute
   '/profile': typeof ProfileRoute
   '/progress': typeof ProgressRoute
@@ -212,8 +327,24 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
+  '/beginner-korean-lessons': typeof BeginnerKoreanLessonsRoute
+  '/certificates': typeof CertificatesRoute
+  '/class-101-alternative': typeof Class101AlternativeRoute
   '/courses': typeof CoursesRoute
+  '/exam-prep': typeof ExamPrepRoute
+  '/free-courses': typeof FreeCoursesRoute
+  '/free-korean-lessons': typeof FreeKoreanLessonsRoute
+  '/interactive-korean-learning': typeof InteractiveKoreanLearningRoute
+  '/king-sejong-institute-alternative': typeof KingSejongInstituteAlternativeRoute
+  '/korean-classes-near-me': typeof KoreanClassesNearMeRoute
+  '/korean-courses-with-certificate': typeof KoreanCoursesWithCertificateRoute
+  '/korean-degree-online': typeof KoreanDegreeOnlineRoute
+  '/korean-language-app': typeof KoreanLanguageAppRoute
+  '/korean-learning-website': typeof KoreanLearningWebsiteRoute
   '/learn': typeof LearnRoute
+  '/learn-korean-language': typeof LearnKoreanLanguageRoute
+  '/learn-korean-online': typeof LearnKoreanOnlineRoute
+  '/learn-korean-online-free': typeof LearnKoreanOnlineFreeRoute
   '/practice': typeof PracticeRoute
   '/profile': typeof ProfileRoute
   '/progress': typeof ProgressRoute
@@ -243,8 +374,24 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/app': typeof AppRouteWithChildren
   '/auth': typeof AuthRoute
+  '/beginner-korean-lessons': typeof BeginnerKoreanLessonsRoute
+  '/certificates': typeof CertificatesRoute
+  '/class-101-alternative': typeof Class101AlternativeRoute
   '/courses': typeof CoursesRoute
+  '/exam-prep': typeof ExamPrepRoute
+  '/free-courses': typeof FreeCoursesRoute
+  '/free-korean-lessons': typeof FreeKoreanLessonsRoute
+  '/interactive-korean-learning': typeof InteractiveKoreanLearningRoute
+  '/king-sejong-institute-alternative': typeof KingSejongInstituteAlternativeRoute
+  '/korean-classes-near-me': typeof KoreanClassesNearMeRoute
+  '/korean-courses-with-certificate': typeof KoreanCoursesWithCertificateRoute
+  '/korean-degree-online': typeof KoreanDegreeOnlineRoute
+  '/korean-language-app': typeof KoreanLanguageAppRoute
+  '/korean-learning-website': typeof KoreanLearningWebsiteRoute
   '/learn': typeof LearnRoute
+  '/learn-korean-language': typeof LearnKoreanLanguageRoute
+  '/learn-korean-online': typeof LearnKoreanOnlineRoute
+  '/learn-korean-online-free': typeof LearnKoreanOnlineFreeRoute
   '/practice': typeof PracticeRoute
   '/profile': typeof ProfileRoute
   '/progress': typeof ProgressRoute
@@ -275,8 +422,24 @@ export interface FileRouteTypes {
     | '/'
     | '/app'
     | '/auth'
+    | '/beginner-korean-lessons'
+    | '/certificates'
+    | '/class-101-alternative'
     | '/courses'
+    | '/exam-prep'
+    | '/free-courses'
+    | '/free-korean-lessons'
+    | '/interactive-korean-learning'
+    | '/king-sejong-institute-alternative'
+    | '/korean-classes-near-me'
+    | '/korean-courses-with-certificate'
+    | '/korean-degree-online'
+    | '/korean-language-app'
+    | '/korean-learning-website'
     | '/learn'
+    | '/learn-korean-language'
+    | '/learn-korean-online'
+    | '/learn-korean-online-free'
     | '/practice'
     | '/profile'
     | '/progress'
@@ -304,8 +467,24 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/auth'
+    | '/beginner-korean-lessons'
+    | '/certificates'
+    | '/class-101-alternative'
     | '/courses'
+    | '/exam-prep'
+    | '/free-courses'
+    | '/free-korean-lessons'
+    | '/interactive-korean-learning'
+    | '/king-sejong-institute-alternative'
+    | '/korean-classes-near-me'
+    | '/korean-courses-with-certificate'
+    | '/korean-degree-online'
+    | '/korean-language-app'
+    | '/korean-learning-website'
     | '/learn'
+    | '/learn-korean-language'
+    | '/learn-korean-online'
+    | '/learn-korean-online-free'
     | '/practice'
     | '/profile'
     | '/progress'
@@ -334,8 +513,24 @@ export interface FileRouteTypes {
     | '/'
     | '/app'
     | '/auth'
+    | '/beginner-korean-lessons'
+    | '/certificates'
+    | '/class-101-alternative'
     | '/courses'
+    | '/exam-prep'
+    | '/free-courses'
+    | '/free-korean-lessons'
+    | '/interactive-korean-learning'
+    | '/king-sejong-institute-alternative'
+    | '/korean-classes-near-me'
+    | '/korean-courses-with-certificate'
+    | '/korean-degree-online'
+    | '/korean-language-app'
+    | '/korean-learning-website'
     | '/learn'
+    | '/learn-korean-language'
+    | '/learn-korean-online'
+    | '/learn-korean-online-free'
     | '/practice'
     | '/profile'
     | '/progress'
@@ -365,8 +560,24 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AppRoute: typeof AppRouteWithChildren
   AuthRoute: typeof AuthRoute
+  BeginnerKoreanLessonsRoute: typeof BeginnerKoreanLessonsRoute
+  CertificatesRoute: typeof CertificatesRoute
+  Class101AlternativeRoute: typeof Class101AlternativeRoute
   CoursesRoute: typeof CoursesRoute
+  ExamPrepRoute: typeof ExamPrepRoute
+  FreeCoursesRoute: typeof FreeCoursesRoute
+  FreeKoreanLessonsRoute: typeof FreeKoreanLessonsRoute
+  InteractiveKoreanLearningRoute: typeof InteractiveKoreanLearningRoute
+  KingSejongInstituteAlternativeRoute: typeof KingSejongInstituteAlternativeRoute
+  KoreanClassesNearMeRoute: typeof KoreanClassesNearMeRoute
+  KoreanCoursesWithCertificateRoute: typeof KoreanCoursesWithCertificateRoute
+  KoreanDegreeOnlineRoute: typeof KoreanDegreeOnlineRoute
+  KoreanLanguageAppRoute: typeof KoreanLanguageAppRoute
+  KoreanLearningWebsiteRoute: typeof KoreanLearningWebsiteRoute
   LearnRoute: typeof LearnRoute
+  LearnKoreanLanguageRoute: typeof LearnKoreanLanguageRoute
+  LearnKoreanOnlineRoute: typeof LearnKoreanOnlineRoute
+  LearnKoreanOnlineFreeRoute: typeof LearnKoreanOnlineFreeRoute
   PracticeRoute: typeof PracticeRoute
   ProfileRoute: typeof ProfileRoute
   ProgressRoute: typeof ProgressRoute
@@ -396,6 +607,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/beginner-korean-lessons': {
+      id: '/beginner-korean-lessons'
+      path: '/beginner-korean-lessons'
+      fullPath: '/beginner-korean-lessons'
+      preLoaderRoute: typeof BeginnerKoreanLessonsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/certificates': {
+      id: '/certificates'
+      path: '/certificates'
+      fullPath: '/certificates'
+      preLoaderRoute: typeof CertificatesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/class-101-alternative': {
+      id: '/class-101-alternative'
+      path: '/class-101-alternative'
+      fullPath: '/class-101-alternative'
+      preLoaderRoute: typeof Class101AlternativeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/courses': {
       id: '/courses'
       path: '/courses'
@@ -403,11 +635,102 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CoursesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/exam-prep': {
+      id: '/exam-prep'
+      path: '/exam-prep'
+      fullPath: '/exam-prep'
+      preLoaderRoute: typeof ExamPrepRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/free-courses': {
+      id: '/free-courses'
+      path: '/free-courses'
+      fullPath: '/free-courses'
+      preLoaderRoute: typeof FreeCoursesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/free-korean-lessons': {
+      id: '/free-korean-lessons'
+      path: '/free-korean-lessons'
+      fullPath: '/free-korean-lessons'
+      preLoaderRoute: typeof FreeKoreanLessonsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/interactive-korean-learning': {
+      id: '/interactive-korean-learning'
+      path: '/interactive-korean-learning'
+      fullPath: '/interactive-korean-learning'
+      preLoaderRoute: typeof InteractiveKoreanLearningRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/king-sejong-institute-alternative': {
+      id: '/king-sejong-institute-alternative'
+      path: '/king-sejong-institute-alternative'
+      fullPath: '/king-sejong-institute-alternative'
+      preLoaderRoute: typeof KingSejongInstituteAlternativeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/korean-classes-near-me': {
+      id: '/korean-classes-near-me'
+      path: '/korean-classes-near-me'
+      fullPath: '/korean-classes-near-me'
+      preLoaderRoute: typeof KoreanClassesNearMeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/korean-courses-with-certificate': {
+      id: '/korean-courses-with-certificate'
+      path: '/korean-courses-with-certificate'
+      fullPath: '/korean-courses-with-certificate'
+      preLoaderRoute: typeof KoreanCoursesWithCertificateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/korean-degree-online': {
+      id: '/korean-degree-online'
+      path: '/korean-degree-online'
+      fullPath: '/korean-degree-online'
+      preLoaderRoute: typeof KoreanDegreeOnlineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/korean-language-app': {
+      id: '/korean-language-app'
+      path: '/korean-language-app'
+      fullPath: '/korean-language-app'
+      preLoaderRoute: typeof KoreanLanguageAppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/korean-learning-website': {
+      id: '/korean-learning-website'
+      path: '/korean-learning-website'
+      fullPath: '/korean-learning-website'
+      preLoaderRoute: typeof KoreanLearningWebsiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/learn': {
       id: '/learn'
       path: '/learn'
       fullPath: '/learn'
       preLoaderRoute: typeof LearnRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/learn-korean-language': {
+      id: '/learn-korean-language'
+      path: '/learn-korean-language'
+      fullPath: '/learn-korean-language'
+      preLoaderRoute: typeof LearnKoreanLanguageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/learn-korean-online': {
+      id: '/learn-korean-online'
+      path: '/learn-korean-online'
+      fullPath: '/learn-korean-online'
+      preLoaderRoute: typeof LearnKoreanOnlineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/learn-korean-online-free': {
+      id: '/learn-korean-online-free'
+      path: '/learn-korean-online-free'
+      fullPath: '/learn-korean-online-free'
+      preLoaderRoute: typeof LearnKoreanOnlineFreeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/practice': {
@@ -634,8 +957,24 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AppRoute: AppRouteWithChildren,
   AuthRoute: AuthRoute,
+  BeginnerKoreanLessonsRoute: BeginnerKoreanLessonsRoute,
+  CertificatesRoute: CertificatesRoute,
+  Class101AlternativeRoute: Class101AlternativeRoute,
   CoursesRoute: CoursesRoute,
+  ExamPrepRoute: ExamPrepRoute,
+  FreeCoursesRoute: FreeCoursesRoute,
+  FreeKoreanLessonsRoute: FreeKoreanLessonsRoute,
+  InteractiveKoreanLearningRoute: InteractiveKoreanLearningRoute,
+  KingSejongInstituteAlternativeRoute: KingSejongInstituteAlternativeRoute,
+  KoreanClassesNearMeRoute: KoreanClassesNearMeRoute,
+  KoreanCoursesWithCertificateRoute: KoreanCoursesWithCertificateRoute,
+  KoreanDegreeOnlineRoute: KoreanDegreeOnlineRoute,
+  KoreanLanguageAppRoute: KoreanLanguageAppRoute,
+  KoreanLearningWebsiteRoute: KoreanLearningWebsiteRoute,
   LearnRoute: LearnRoute,
+  LearnKoreanLanguageRoute: LearnKoreanLanguageRoute,
+  LearnKoreanOnlineRoute: LearnKoreanOnlineRoute,
+  LearnKoreanOnlineFreeRoute: LearnKoreanOnlineFreeRoute,
   PracticeRoute: PracticeRoute,
   ProfileRoute: ProfileRoute,
   ProgressRoute: ProgressRoute,
