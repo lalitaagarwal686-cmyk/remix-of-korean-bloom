@@ -55,3 +55,7 @@ Upgrade urinara.in into a self-contained Korean learning and TOPIK prep platform
 - "100,000+ words" is an architecture promise: the table and import pipeline support it, and this pass seeds the curated starter tiers (~1,500–2,000 words) — full NIIED 6,000 and beyond fills in through staged imports, not one giant insert.
 - Past-paper PDFs are linked, not re-hosted (copyright); the mock engine uses original official-format questions.
 - Full NIIED-format question bank depth grows over time; this pass ships working seeded exams for both TOPIK I and TOPIK II formats.
+
+Also include 10 lakh + vocabularies of Korean used for t o p i k one and two three four five six 
+
+Like take all the knowledge from the internet and gravity updating yourself with the internet Korean language Topik exam updating with the Korean language if new words are come on internet then it should be included in this app like all the knowledge of Korean language should be in this app
