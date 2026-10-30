@@ -76,7 +76,10 @@ function Page() {
   async function save() {
     if (!result) return;
     const { data: auth } = await supabase.auth.getUser();
-    if (!auth.user) return toast.error("Sign in to save words.");
+    if (!auth.user) {
+      toast.error("Sign in to save words.");
+      return;
+    }
     const { error } = await supabase.from("user_vocabulary").insert({
       user_id: auth.user.id,
       custom_hangul: result.term,

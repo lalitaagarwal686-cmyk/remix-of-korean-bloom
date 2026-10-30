@@ -17,7 +17,7 @@ export type WordExplanation = {
   examples: { ko: string; romanization: string; en: string }[];
   related: string[];
   demoMode: boolean;
-  error?: string;
+  error?: string | undefined;
 };
 
 function demo(term: string, error?: string): WordExplanation {
