@@ -12,3 +12,6 @@ Approved plan: `.lovable/plan/urinara-academy-ai-korean-topik-platform-upgrade-2
 8. [ ] Navigation updates (desktop header, mobile bottom nav, mobile menu)
 9. [ ] Grammar Matrix level filters
 10. [ ] Build check + Playwright verification of new screens
+11. [x] AI word/phrase explainer with TOPIK 1–6 level + Naver Dictionary links (/app/vocabulary)
+12. [ ] Bulk-import large open TOPIK/NIKL word lists (1 lakh+) into the database
+13. [ ] Payments: pricing page + Stripe test checkout (needs paid plan or own Stripe keys)
