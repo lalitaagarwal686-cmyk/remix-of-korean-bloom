@@ -10,6 +10,7 @@ import { grammarPoints, lessonSteps, quiz, words } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/learn")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Lesson 1: Greetings & Introductions | Urinara Academy Korean" },

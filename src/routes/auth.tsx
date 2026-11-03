@@ -10,6 +10,7 @@ import { useAuth } from "@/lib/auth";
 import logoUrl from "@/assets/urinara-logo.png";
 
 export const Route = createFileRoute("/auth")({
+  staticData: { sitemap: false },
   head: () => ({
     meta: [
       { title: "Sign in — Urinara Academy AI Korean Tutor" },

@@ -11,6 +11,7 @@ import { curriculumQueries, learnerQueries } from "@/lib/queries";
 import { useActiveTutor } from "@/lib/use-tutor";
 
 export const Route = createFileRoute("/app/dashboard")({
+  staticData: { sitemap: false },
   head: () => ({
     meta: [
       { title: "Dashboard — Urinara Academy" },

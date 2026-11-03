@@ -3,6 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/app/AppShell";
 
 export const Route = createFileRoute("/app/pricing")({
+  staticData: { sitemap: false },
   head: () => ({
     meta: [
       { title: "Pricing — Urinara Academy" },
