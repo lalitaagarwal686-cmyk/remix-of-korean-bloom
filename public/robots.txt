@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://urinara.in/sitemap.xml
+Sitemap: https://korean-harmony-path.lovable.app/sitemap.xml
