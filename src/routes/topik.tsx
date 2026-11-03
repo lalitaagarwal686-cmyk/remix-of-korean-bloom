@@ -19,6 +19,7 @@ import { Reveal } from "@/components/Reveal";
 import { Section, SectionHeading } from "@/components/Section";
 
 export const Route = createFileRoute("/topik")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "TOPIK Preparation & Free Placement Test | Urinara Academy Korean" },

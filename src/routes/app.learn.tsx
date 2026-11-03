@@ -7,6 +7,7 @@ import { useAuth } from "@/lib/auth";
 import { curriculumQueries, learnerQueries } from "@/lib/queries";
 
 export const Route = createFileRoute("/app/learn")({
+  staticData: { sitemap: false },
   head: () => ({
     meta: [
       { title: "Learn Korean — lessons & missions | Urinara Academy" },

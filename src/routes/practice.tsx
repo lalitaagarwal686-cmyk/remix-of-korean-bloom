@@ -10,6 +10,7 @@ import { useKoreanSpeech } from "@/hooks/use-korean-speech";
 import { quiz, words } from "@/lib/content";
 
 export const Route = createFileRoute("/practice")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Korean Practice Hub — Flashcards, Quizzes & Speaking | Urinara Academy" },

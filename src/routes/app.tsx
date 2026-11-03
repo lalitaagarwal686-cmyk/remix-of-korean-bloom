@@ -5,6 +5,7 @@ import { AppShell } from "@/components/app/AppShell";
 import { useAuth } from "@/lib/auth";
 
 export const Route = createFileRoute("/app")({
+  staticData: { sitemap: "exclude-subtree" },
   component: AppLayout,
 });
 

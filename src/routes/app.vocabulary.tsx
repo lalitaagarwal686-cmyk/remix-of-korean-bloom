@@ -14,6 +14,7 @@ import { explainKoreanTerm } from "@/lib/vocab.functions";
 import type { WordExplanation } from "@/lib/explain.server";
 
 export const Route = createFileRoute("/app/vocabulary")({
+  staticData: { sitemap: false },
   head: () => ({
     meta: [
       { title: "TOPIK 1–6 Vocabulary Explorer & AI Word Explainer — Urinara Academy" },

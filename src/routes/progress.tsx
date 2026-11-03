@@ -8,6 +8,7 @@ import { StreakStrip } from "@/components/StreakStrip";
 import { progressData } from "@/lib/content";
 
 export const Route = createFileRoute("/progress")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Your Korean Progress — Streak, XP & Skills | Urinara Academy" },

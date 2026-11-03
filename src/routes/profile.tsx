@@ -17,6 +17,7 @@ import { Reveal } from "@/components/Reveal";
 import { progressData } from "@/lib/content";
 
 export const Route = createFileRoute("/profile")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Profile & Study Settings | Urinara Academy Korean" },

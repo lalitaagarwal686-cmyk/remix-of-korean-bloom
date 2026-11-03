@@ -6,6 +6,7 @@ import { landingFor } from "@/lib/seo-landings";
 const landing = landingFor("/exam-prep");
 
 export const Route = createFileRoute("/exam-prep")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: landing.metaTitle },

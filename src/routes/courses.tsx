@@ -8,6 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { courses } from "@/lib/content";
 
 export const Route = createFileRoute("/courses")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Korean Courses — Beginner to Advanced | Urinara Academy" },

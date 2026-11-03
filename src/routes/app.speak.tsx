@@ -3,6 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/app/AppShell";
 
 export const Route = createFileRoute("/app/speak")({
+  staticData: { sitemap: false },
   head: () => ({
     meta: [
       { title: "Speak — Urinara Academy" },

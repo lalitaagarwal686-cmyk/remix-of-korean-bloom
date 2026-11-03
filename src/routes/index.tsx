@@ -36,6 +36,7 @@ import {
 } from "@/lib/content";
 
 export const Route = createFileRoute("/")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Urinara Academy — Learn Korean from Hangul to TOPIK II" },
