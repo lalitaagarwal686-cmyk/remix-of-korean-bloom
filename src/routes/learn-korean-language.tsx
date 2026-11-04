@@ -14,9 +14,9 @@ export const Route = createFileRoute("/learn-korean-language")({
       { property: "og:title", content: landing.metaTitle },
       { property: "og:description", content: landing.metaDescription },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://korean-harmony-path.lovable.app/learn-korean-language" },
+      { property: "og:url", content: "https://urinara.in/learn-korean-language" },
     ],
-    links: [{ rel: "canonical", href: "https://korean-harmony-path.lovable.app/learn-korean-language" }],
+    links: [{ rel: "canonical", href: "https://urinara.in/learn-korean-language" }],
   }),
   component: LandingPage,
 });

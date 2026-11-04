@@ -14,9 +14,9 @@ export const Route = createFileRoute("/class-101-alternative")({
       { property: "og:title", content: landing.metaTitle },
       { property: "og:description", content: landing.metaDescription },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://korean-harmony-path.lovable.app/class-101-alternative" },
+      { property: "og:url", content: "https://urinara.in/class-101-alternative" },
     ],
-    links: [{ rel: "canonical", href: "https://korean-harmony-path.lovable.app/class-101-alternative" }],
+    links: [{ rel: "canonical", href: "https://urinara.in/class-101-alternative" }],
   }),
   component: LandingPage,
 });

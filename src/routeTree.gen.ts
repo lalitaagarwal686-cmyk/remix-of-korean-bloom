@@ -33,6 +33,7 @@ import { Route as LearnKoreanOnlineFreeRouteImport } from './routes/learn-korean
 import { Route as PracticeRouteImport } from './routes/practice'
 import { Route as ProfileRouteImport } from './routes/profile'
 import { Route as ProgressRouteImport } from './routes/progress'
+import { Route as SitemapRouteImport } from './routes/sitemap'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TopikRouteImport } from './routes/topik'
 import { Route as AppIndexRouteImport } from './routes/app.index'
@@ -178,6 +179,11 @@ const ProgressRoute = ProgressRouteImport.update({
   path: '/progress',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapRoute = SitemapRouteImport.update({
+  id: '/sitemap',
+  path: '/sitemap',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -309,6 +315,7 @@ export interface FileRoutesByFullPath {
   '/practice': typeof PracticeRoute
   '/profile': typeof ProfileRoute
   '/progress': typeof ProgressRoute
+  '/sitemap': typeof SitemapRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/topik': typeof TopikRoute
   '/app/achievements': typeof AppAchievementsRoute
@@ -355,6 +362,7 @@ export interface FileRoutesByTo {
   '/practice': typeof PracticeRoute
   '/profile': typeof ProfileRoute
   '/progress': typeof ProgressRoute
+  '/sitemap': typeof SitemapRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/topik': typeof TopikRoute
   '/app/achievements': typeof AppAchievementsRoute
@@ -403,6 +411,7 @@ export interface FileRoutesById {
   '/practice': typeof PracticeRoute
   '/profile': typeof ProfileRoute
   '/progress': typeof ProgressRoute
+  '/sitemap': typeof SitemapRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/topik': typeof TopikRoute
   '/app/achievements': typeof AppAchievementsRoute
@@ -452,6 +461,7 @@ export interface FileRouteTypes {
     | '/practice'
     | '/profile'
     | '/progress'
+    | '/sitemap'
     | '/sitemap.xml'
     | '/topik'
     | '/app/achievements'
@@ -498,6 +508,7 @@ export interface FileRouteTypes {
     | '/practice'
     | '/profile'
     | '/progress'
+    | '/sitemap'
     | '/sitemap.xml'
     | '/topik'
     | '/app/achievements'
@@ -545,6 +556,7 @@ export interface FileRouteTypes {
     | '/practice'
     | '/profile'
     | '/progress'
+    | '/sitemap'
     | '/sitemap.xml'
     | '/topik'
     | '/app/achievements'
@@ -593,6 +605,7 @@ export interface RootRouteChildren {
   PracticeRoute: typeof PracticeRoute
   ProfileRoute: typeof ProfileRoute
   ProgressRoute: typeof ProgressRoute
+  SitemapRoute: typeof SitemapRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TopikRoute: typeof TopikRoute
 }
@@ -765,6 +778,13 @@ declare module '@tanstack/react-router' {
       path: '/progress'
       fullPath: '/progress'
       preLoaderRoute: typeof ProgressRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap': {
+      id: '/sitemap'
+      path: '/sitemap'
+      fullPath: '/sitemap'
+      preLoaderRoute: typeof SitemapRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -998,6 +1018,7 @@ const rootRouteChildren: RootRouteChildren = {
   PracticeRoute: PracticeRoute,
   ProfileRoute: ProfileRoute,
   ProgressRoute: ProgressRoute,
+  SitemapRoute: SitemapRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TopikRoute: TopikRoute,
 }

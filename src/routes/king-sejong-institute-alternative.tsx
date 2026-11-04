@@ -14,9 +14,9 @@ export const Route = createFileRoute("/king-sejong-institute-alternative")({
       { property: "og:title", content: landing.metaTitle },
       { property: "og:description", content: landing.metaDescription },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://korean-harmony-path.lovable.app/king-sejong-institute-alternative" },
+      { property: "og:url", content: "https://urinara.in/king-sejong-institute-alternative" },
     ],
-    links: [{ rel: "canonical", href: "https://korean-harmony-path.lovable.app/king-sejong-institute-alternative" }],
+    links: [{ rel: "canonical", href: "https://urinara.in/king-sejong-institute-alternative" }],
   }),
   component: LandingPage,
 });

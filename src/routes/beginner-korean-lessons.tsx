@@ -14,9 +14,9 @@ export const Route = createFileRoute("/beginner-korean-lessons")({
       { property: "og:title", content: landing.metaTitle },
       { property: "og:description", content: landing.metaDescription },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://korean-harmony-path.lovable.app/beginner-korean-lessons" },
+      { property: "og:url", content: "https://urinara.in/beginner-korean-lessons" },
     ],
-    links: [{ rel: "canonical", href: "https://korean-harmony-path.lovable.app/beginner-korean-lessons" }],
+    links: [{ rel: "canonical", href: "https://urinara.in/beginner-korean-lessons" }],
   }),
   component: LandingPage,
 });

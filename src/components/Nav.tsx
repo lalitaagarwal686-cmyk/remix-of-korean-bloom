@@ -185,8 +185,11 @@ export function SiteFooter() {
           ]}
         />
       </div>
-      <div className="container-page border-t border-border py-6 text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Urinara Academy. Sample content for demonstration.
+      <div className="container-page flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-border py-6 text-xs text-muted-foreground">
+        <span>© {new Date().getFullYear()} Urinara Academy. Sample content for demonstration.</span>
+        <Link to="/sitemap" className="transition-colors hover:text-foreground">
+          Sitemap
+        </Link>
       </div>
     </footer>
   );

@@ -14,9 +14,9 @@ export const Route = createFileRoute("/free-courses")({
       { property: "og:title", content: landing.metaTitle },
       { property: "og:description", content: landing.metaDescription },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://korean-harmony-path.lovable.app/free-courses" },
+      { property: "og:url", content: "https://urinara.in/free-courses" },
     ],
-    links: [{ rel: "canonical", href: "https://korean-harmony-path.lovable.app/free-courses" }],
+    links: [{ rel: "canonical", href: "https://urinara.in/free-courses" }],
   }),
   component: LandingPage,
 });

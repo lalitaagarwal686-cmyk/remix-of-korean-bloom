@@ -14,9 +14,9 @@ export const Route = createFileRoute("/exam-prep")({
       { property: "og:title", content: landing.metaTitle },
       { property: "og:description", content: landing.metaDescription },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://korean-harmony-path.lovable.app/exam-prep" },
+      { property: "og:url", content: "https://urinara.in/exam-prep" },
     ],
-    links: [{ rel: "canonical", href: "https://korean-harmony-path.lovable.app/exam-prep" }],
+    links: [{ rel: "canonical", href: "https://urinara.in/exam-prep" }],
   }),
   component: LandingPage,
 });

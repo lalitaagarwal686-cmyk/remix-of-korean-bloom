@@ -14,9 +14,9 @@ export const Route = createFileRoute("/korean-courses-with-certificate")({
       { property: "og:title", content: landing.metaTitle },
       { property: "og:description", content: landing.metaDescription },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://korean-harmony-path.lovable.app/korean-courses-with-certificate" },
+      { property: "og:url", content: "https://urinara.in/korean-courses-with-certificate" },
     ],
-    links: [{ rel: "canonical", href: "https://korean-harmony-path.lovable.app/korean-courses-with-certificate" }],
+    links: [{ rel: "canonical", href: "https://urinara.in/korean-courses-with-certificate" }],
   }),
   component: LandingPage,
 });

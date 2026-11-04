@@ -14,9 +14,9 @@ export const Route = createFileRoute("/korean-degree-online")({
       { property: "og:title", content: landing.metaTitle },
       { property: "og:description", content: landing.metaDescription },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://korean-harmony-path.lovable.app/korean-degree-online" },
+      { property: "og:url", content: "https://urinara.in/korean-degree-online" },
     ],
-    links: [{ rel: "canonical", href: "https://korean-harmony-path.lovable.app/korean-degree-online" }],
+    links: [{ rel: "canonical", href: "https://urinara.in/korean-degree-online" }],
   }),
   component: LandingPage,
 });

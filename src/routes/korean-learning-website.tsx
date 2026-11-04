@@ -14,9 +14,9 @@ export const Route = createFileRoute("/korean-learning-website")({
       { property: "og:title", content: landing.metaTitle },
       { property: "og:description", content: landing.metaDescription },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://korean-harmony-path.lovable.app/korean-learning-website" },
+      { property: "og:url", content: "https://urinara.in/korean-learning-website" },
     ],
-    links: [{ rel: "canonical", href: "https://korean-harmony-path.lovable.app/korean-learning-website" }],
+    links: [{ rel: "canonical", href: "https://urinara.in/korean-learning-website" }],
   }),
   component: LandingPage,
 });

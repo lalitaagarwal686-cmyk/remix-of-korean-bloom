@@ -14,9 +14,9 @@ export const Route = createFileRoute("/certificates")({
       { property: "og:title", content: landing.metaTitle },
       { property: "og:description", content: landing.metaDescription },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://korean-harmony-path.lovable.app/certificates" },
+      { property: "og:url", content: "https://urinara.in/certificates" },
     ],
-    links: [{ rel: "canonical", href: "https://korean-harmony-path.lovable.app/certificates" }],
+    links: [{ rel: "canonical", href: "https://urinara.in/certificates" }],
   }),
   component: LandingPage,
 });
